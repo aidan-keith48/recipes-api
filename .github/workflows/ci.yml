@@ -54,4 +54,4 @@ jobs:
           REPOSITORY: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: poetry run python agent.py
+        run: poetry run python agent.py $GITHUB_TOKEN $REPOSITORY $PR_NUMBER $GROQ_API_KEY
